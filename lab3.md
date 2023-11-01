@@ -38,7 +38,7 @@ export default {
 With this code in place, you can test your Worker locally by running the following command:
 
 ```sh
-npm run dev
+npm run dev --remote
 ```
 
 This will allow you to interact with your chatbot and receive answers to questions in real-time.
