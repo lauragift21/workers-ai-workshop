@@ -16,18 +16,22 @@ import { Ai } from '@cloudflare/ai';
 
 ```js
 export default {
-  async fetch(request, env) {
+	async fetch(request, env) {
     // Create an instance of the AI using the provided environment variable.
-    const ai = new Ai(env.AI);
+		const ai = new Ai(env.AI)
 
     // Execute an inference task using Llama 2 for a given prompt.
-    const response = await ai.run('@cf/meta/llama-2-7b-chat-int8', {
-      prompt: "Who was the first president of Nigeria?",
-    });
+		const response = await ai.run('@cf/meta/llama-2-7b-chat-int8', {
+			prompt: 'Who was the first president of Nigeria?'
+		})
 
     // Present the response as a JSON string.
-    return new Response(JSON.stringify(response));
-  }
+		return new Response(JSON.stringify(response), {
+			headers: {
+				'content-type': 'application/json;charset=UTF-8',
+			},
+		})
+	}
 }
 ```
 
@@ -38,4 +42,3 @@ npm run dev
 ```
 
 This will allow you to interact with your chatbot and receive answers to questions in real-time.
-
