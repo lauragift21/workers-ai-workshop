@@ -19,7 +19,7 @@ Before we dive into building your ChatGPT clone, make sure you have the followin
 
 - __A Code Editor__: You should have a code editor of your choice (e.g., Visual Studio Code, Stackblitz, GitHub Codespaces, or any other) installed on your system or accessible on your browser.
 
-## Lab 1: Getting Started
+## [Lab 1: Getting Started](./lab1.md)
 
 To create a new project named `workers-ai-chatgpt-clone`, follow these steps:
 
@@ -53,6 +53,10 @@ npm run dev
 This command will launch your application, making it accessible at `http://127.0.0.1:8787/`. You should see a "Hello World" message displayed on the screen.
 
 ## Lab 2: Connect your Worker to Workers AI
+
+## Lab 3: 
+
+## Lab 4: 
 
 ## Lab 5: Deploy your Worker
 
