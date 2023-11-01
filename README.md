@@ -20,10 +20,20 @@ Before we dive into building your ChatGPT clone, make sure you have the followin
 - __A Code Editor__: You should have a code editor of your choice (e.g., Visual Studio Code, Stackblitz, GitHub Codespaces, or any other) installed on your system or accessible on your browser.
 
 ## [Lab 1: Getting Started](./lab1.md)
+This is where you start the workshop journey and set up the initial project environment.
+
 ## [Lab 2: Connect your Worker to Workers AI](./lab2.md)
+
+Establish a connection between your Worker and Workers AI by creating a binding.
+
 ## [Lab 3: Run Inference Task in your Worker](./lab3.md)
+Implement the core functionality by running an inference task with your chatbot.
+
 ## [Lab 4: Streaming Response ](./lab4.md)
+Enhance your chatbot with streaming responses to provide a dynamic conversational experience.
+
 ## [Lab 5: Deploy your Worker](./lab5.md)
+Prepare your chatbot to be accessible globally by deploying it to the internet.
 
 ## Next Steps
 
