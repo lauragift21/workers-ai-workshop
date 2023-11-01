@@ -126,7 +126,7 @@ Once you've completed this workshop, you're on your way to creating more advance
 
 - Modify your chatbot to suit your specific needs. You can teach it industry-specific jargon, incorporate your branding, and tailor its behavior.
 
-- Join the Cloudflare Discord community, and share what you've built.
+- Join the [Cloudflare Discord community](https://discord.gg/cloudflaredev), and share what you've built.
 
 ## Additional Resources
 
@@ -137,6 +137,7 @@ To help you along your journey with learning Workers AI, here are some additiona
 - [Workers AI Announcement Post](https://blog.cloudflare.com/workers-ai/): Read the official announcement post to understand the vision and goals of Workers AI.
 - [AI Gateway](https://developers.cloudflare.com/ai-gateway/): Explore the AI Gateway, another powerful tool in Cloudflare's AI ecosystem.
 - [Vectorize](https://developers.cloudflare.com/vectorize) - Vector Database that enables you to build full-stack, AI-powered applications with Cloudflare Workers.
+- [Workers Discord Community](https://discord.gg/cloudflaredev): Got any questions, you can get help from our vibrant discord community.
 
 ## Thank You
 
