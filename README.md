@@ -5,7 +5,7 @@
   </strong> 
   <hr />
   <p>
-    Welcome to this workshop! In this hands-on session, you will learn how to harness the power of Cloudflare's global network and Workers AI to create smart conversational chatbots. By the end of this workshop, you will have the skills to develop your own chatbots capable of engaging in natural and interesting conversations.
+    In this hands-on session, you will learn how to harness the power of Cloudflare's global network and Workers AI to create smart conversational chatbots. By the end of this workshop, you will have the skills to develop your own chatbots capable of engaging in natural and interesting conversations.
   </p>
 </div>
 
