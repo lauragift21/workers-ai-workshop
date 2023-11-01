@@ -42,10 +42,19 @@ npm create cloudflare@latest
 - A "Hello World" Worker located at `src/index.js`.
 - A `wrangler.toml` configuration file.
 
-This setup will prepare you to begin working on your project.
+This configuration will set you up to start working on your project.
 
-## Deploy your Worker
+To run your application on your local machine, you can use the following command:
 
+```sh
+npm run dev
+```
+
+This command will launch your application, making it accessible at `http://127.0.0.1:8787/`. You should see a "Hello World" message displayed on the screen.
+
+## Lab 2: Connect your Worker to Workers AI
+
+## Lab 5: Deploy your Worker
 
 ## Next Steps
 
