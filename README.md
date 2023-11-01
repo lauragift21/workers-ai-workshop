@@ -52,7 +52,7 @@ npm run dev
 
 This command will launch your application, making it accessible at `http://127.0.0.1:8787/`. You should see a "Hello World" message displayed on the screen.
 
-## Lab 2: Connect your Worker to Workers AI
+## [Lab 2: Connect your Worker to Workers AI](./lab2.md)
 
 In this lab, we will establish a connection between our Worker and Workers AI by creating a binding. Bindings serve as a means for Workers to access external resources or services, such as Workers AI on the Cloudflare developer platform. To create this binding, you will need to make modifications to the `wrangler.toml` configuration file.
 
@@ -73,7 +73,7 @@ npm install --save @cloudflare/ai
 
 Once the installation is complete, you're ready to move on to the next lab, where you can begin running inference tasks within your Worker.
 
-## Lab 3: Run Inference Task in your Worker
+## [Lab 3: Run Inference Task in your Worker](./lab3.md)
 
 Now, let's focus on the main task of this workshop, which is building a ChatGPT-like chatbot capable of answering questions. To make this possible, we'll leverage a Large Language Model (LLM) called Llama 2.
 
