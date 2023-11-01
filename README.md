@@ -1,11 +1,11 @@
 <div>
   <h1 align="center"><a href="https://nigeria.cityjsconf.org/workshop/7LGrikzQ6c1bORXnKSwf2u">Build a ChatGPT Clone with Workers AI Workshop</a></h1>
   <strong>
-    Workers AI allows you run machine learning models, powered by serverless GPUs, on Cloudflare’s global network.
+    Workers AI allows you to run machine learning models, on the Cloudflare network, from your own code – whether that be from Workers, Pages, or anywhere via REST API.
   </strong> 
   <hr />
   <p>
-    Welcome to the "Build a ChatGPT Clone with Workers AI" workshop! In this hands-on session, you will learn how to harness the power of Cloudflare's global network and Workers AI to create smart conversational chatbots. By the end of this workshop, you will have the skills to develop your own chatbots capable of engaging in natural and dynamic conversations.
+    Welcome to this workshop! In this hands-on session, you will learn how to harness the power of Cloudflare's global network and Workers AI to create smart conversational chatbots. By the end of this workshop, you will have the skills to develop your own chatbots capable of engaging in natural and interesting conversations.
   </p>
 </div>
 
@@ -21,6 +21,28 @@ Before we dive into building your ChatGPT clone, make sure you have the followin
 
 ## Getting Started
 
+To create a new project named `workers-ai-chatgpt-clone`, follow these steps:
+
+1. Open your command-line interface (CLI) and run the following command:
+
+```sh
+npm create cloudflare@latest
+```
+
+2. During the setup process, you will be prompted to provide information. Please respond to the prompts as follows:
+
+- For the directory where your project will be created, enter `workers-ai-chatgpt-clone`.
+- Choose the `Hello World` script as the type of application you intend to build.
+- Opt not to use TypeScript by selecting `No`.
+- Opt to use Git by selecting `Yes`.
+- Choose not to deploy your application at this point by selecting `No`.
+
+3. Once you've completed these prompts, a new directory named `workers-ai-chatgpt-clone` will be generated, containing the following files:
+
+- A "Hello World" Worker located at `src/index.js`.
+- A `wrangler.toml` configuration file.
+
+This setup will prepare you to begin working on your project.
 
 ## Deploy your Worker
 
@@ -29,7 +51,7 @@ Before we dive into building your ChatGPT clone, make sure you have the followin
 
 Once you've completed this workshop, you're on your way to creating more advanced chatbots and exploring the full potential of Workers AI. Here are some next steps to consider:
 
-- 
+<!-- TODO: Add one more to help their chatbot look more like chatgpt they can add a bit of styling / use the shadcdn drop-in component -->
 
 - Modify your chatbot to suit your specific needs. You can teach it industry-specific jargon, incorporate your branding, and tailor its behavior.
 
@@ -43,6 +65,7 @@ To help you along your journey with learning Workers AI, here are some additiona
 - [Workers AI Docs](https://developers.cloudflare.com/workers-ai/): Dive into the documentation for in-depth knowledge of Workers AI.
 - [Workers AI Announcement Post](https://blog.cloudflare.com/workers-ai/): Read the official announcement post to understand the vision and goals of Workers AI.
 - [AI Gateway](https://developers.cloudflare.com/ai-gateway/): Explore the AI Gateway, another powerful tool in Cloudflare's AI ecosystem.
+- [Vectorize](https://developers.cloudflare.com/vectorize) - Vector Database that enables you to build full-stack, AI-powered applications with Cloudflare Workers.
 
 ## Thank You
 
