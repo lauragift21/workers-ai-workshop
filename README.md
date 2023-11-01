@@ -19,7 +19,7 @@ Before we dive into building your ChatGPT clone, make sure you have the followin
 
 - __A Code Editor__: You should have a code editor of your choice (e.g., Visual Studio Code, Stackblitz, GitHub Codespaces, or any other) installed on your system or accessible on your browser.
 
-## Getting Started
+## Lab 1: Getting Started
 
 To create a new project named `workers-ai-chatgpt-clone`, follow these steps:
 
