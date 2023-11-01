@@ -17,18 +17,22 @@ import { Ai } from '@cloudflare/ai';
 ```js
 export default {
 	async fetch(request, env) {
-		// Create an instance of the AI using the provided environment variable.
-		const ai = new Ai(env.AI);
+    // Create an instance of the AI using the provided environment variable.
+		const ai = new Ai(env.AI)
 
-		// Execute an inference task using Llama 2 for a given prompt.
+    // Execute an inference task using Llama 2 for a given prompt.
 		const response = await ai.run('@cf/meta/llama-2-7b-chat-int8', {
-			prompt: 'Who was the first president of Nigeria?',
-		});
+			prompt: 'Who was the first president of Nigeria?'
+		})
 
-		// Present the response as a JSON string.
-		return new Response(JSON.stringify(response));
-	},
-};
+    // Present the response as a JSON string.
+		return new Response(JSON.stringify(response), {
+			headers: {
+				'content-type': 'application/json;charset=UTF-8',
+			},
+		})
+	}
+}
 ```
 
 With this code in place, you can test your Worker locally by running the following command:
