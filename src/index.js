@@ -4,14 +4,16 @@ export default {
 	async fetch(request, env) {
 		const ai = new Ai(env.AI)
 
+		// personalize with chat style
+		const messages = [
+			{ role: 'system', content: 'You are a friendly assistant.' },
+			{ role: 'user', content: 'What is the weather like?' },
+		]
+
 		const response = await ai.run('@cf/meta/llama-2-7b-chat-int8', {
-			prompt: 'Who was the first president of Nigeria?'
+			messages,
 		})
 
-		return new Response(JSON.stringify(response), {
-			headers: {
-				'content-type': 'application/json;charset=UTF-8',
-			},
-		})
-	}
+		return Response.json(response);
+}
 }
