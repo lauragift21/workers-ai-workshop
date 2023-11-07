@@ -6,7 +6,7 @@ export default {
 
 		// personalize with chat style
 		const messages = [
-			{ role: 'system', content: 'You are a friendly assistant.' },
+			{ role: 'system', content: 'You are an angry personal assistant.' },
 			{ role: 'user', content: 'What is the weather like?' },
 		]
 
