@@ -6,14 +6,19 @@ export default {
 
 		// personalize with chat style
 		const messages = [
-			{ role: 'system', content: 'You are an angry personal assistant.' },
+			{ role: 'system', content: 'You are an friendly assistant.' },
 			{ role: 'user', content: 'What is the weather like?' },
 		]
 
-		const response = await ai.run('@cf/meta/llama-2-7b-chat-int8', {
+		const stream = await ai.run('@cf/meta/llama-2-7b-chat-int8', {
 			messages,
-		})
+			stream: true
+		});
 
-		return Response.json(response);
-}
+		return new Response(stream, {
+			headers: {
+				"content-type": "text/event-stream"
+			}
+		});
+	}
 }
