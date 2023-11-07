@@ -19,6 +19,10 @@ Before we dive into building your ChatGPT clone, make sure you have the followin
 
 - __A Code Editor__: You should have a code editor of your choice (e.g., Visual Studio Code, Stackblitz, GitHub Codespaces, or any other) installed on your system or accessible on your browser.
 
+### Slides
+
+These are the slides that accompany the workshop: [Workers AI Presentation](https://docs.google.com/presentation/d/1dB-H5jeyDJgFmS58yfEJ-5ZEM_N73qvsRFpYXSnW6aM/edit?usp=sharing)
+
 ## [Lab 1: Getting Started](./lab1.md)
 This is where you start the workshop journey and set up the initial project environment.
 
@@ -32,7 +36,10 @@ Implement the core functionality by running an inference task with your chatbot.
 ## [Lab 4: Streaming Response ](./lab4.md)
 Enhance your chatbot with streaming responses to provide a dynamic conversational experience.
 
-## [Lab 5: Deploy your Worker](./lab5.md)
+## [Lab 5: Styling our Chatbot](./lab5.md)
+Let's add a bit of love to our application, by creating a UI for the chat interface.
+
+## [Lab 6: Deploy your Worker](./lab6.md)
 Prepare your chatbot to be accessible globally by deploying it to the internet.
 
 ## Next Steps
@@ -42,6 +49,8 @@ Once you've completed this workshop, you're on your way to creating more advance
 <!-- TODO: Add one more to help their chatbot look more like chatgpt they can add a bit of styling / use the shadcdn drop-in component -->
 
 - Modify your chatbot to suit your specific needs. You can teach it industry-specific jargon, incorporate your branding, and tailor its behavior.
+
+- Add ability to save generated reponses for 30 day period.
 
 - Join the [Cloudflare Discord community](https://discord.gg/cloudflaredev), and share what you've built.
 
