@@ -1,4 +1,4 @@
-# Lab 5: Deploy your Worker
+# Lab 6: Deploy your Worker
 
 Before you can deploy your AI Worker globally, you need to follow these steps to ensure everything is set up correctly:
 

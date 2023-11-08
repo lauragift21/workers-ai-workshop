@@ -1,6 +1,6 @@
 # Lab 4: Streaming Responses with Workers AI
 
-This lab will introduce you to the concept and implementation of streaming responses. Unlike the normal approach where the server sends a complete response at once, streaming allows the server to send responses in multiple, smaller chunks. This technique is particularly beneficial for handling large data sets or delivering real-time content.
+This lab will introduces the concept and implementation of streaming responses. Unlike the normal approach where the server sends a complete response at once, streaming allows the server to send responses in multiple, smaller chunks. This technique is particularly beneficial for handling large data sets or delivering real-time content.
 
 In the previous lab, we received responses as a single block of data. Now, we'll shift to a streaming response model. Before we proceed, we'll first refine our bot prompt method.
 
