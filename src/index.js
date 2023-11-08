@@ -15,14 +15,13 @@ export default {
 				{ role: 'user', content: userMessage },
 			]
 
-			const stream = await ai.run('@cf/meta/llama-2-7b-chat-int8', {
+			const message = await ai.run('@cf/meta/llama-2-7b-chat-int8', {
 				messages,
-				stream: true
 			});
 
-			return new Response(stream, {
+			return new Response(JSON.stringify(message), {
 				headers: {
-					"content-type": "text/event-stream"
+					"content-type": "application/json;charset=UTF-8"
 				}
 			});
 		}

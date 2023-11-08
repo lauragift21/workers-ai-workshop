@@ -33,13 +33,13 @@ Establish a connection between your Worker and Workers AI by creating a binding.
 ## [Lab 3: Run Inference Task in your Worker](./lab3.md)
 Implement the core functionality by running an inference task with your chatbot.
 
-## [Lab 4: Streaming Response with Workers AI ](./lab4.md)
-Enhance your chatbot with streaming responses to provide a dynamic conversational experience.
+<!-- ## [Lab 4: Streaming Response with Workers AI ](./lab4.md)
+Enhance your chatbot with streaming responses to provide a dynamic conversational experience. -->
 
-## [Lab 5: Styling our Chatbot](./lab5.md)
+## [Lab 4: Customizing the Chatbot Interface](./lab5.md)
 Let's add a bit of love to our application, by creating a UI for the chat interface.
 
-## [Lab 6: Deploy your Worker](./lab6.md)
+## [Lab 5: Deploy your Worker](./lab6.md)
 Prepare your chatbot to be accessible globally by deploying it to the internet.
 
 ## Next Steps

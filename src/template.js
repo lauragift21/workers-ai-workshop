@@ -9,20 +9,20 @@ export const html = `
 		<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 	</head>
 	<body class="bg-gray-700 text-white h-screen overflow-hidden flex">
-		<div class="bg-gray-900 w-80 p-6 overflow-auto">
+		<div class="bg-gray-900 w-1/5 p-6 overflow-auto">
 			<h1 class="text-2xl font-bold">ChatGPT Clone App</h1>
-			<p class="mt-2 text-gray-400 text-md">
+			<p class="mt-2 text-gray-400 text-lg">
 				Welcome! This app is your personal assistant that is available 24/7 to help with your questions.
 			</p>
 		</div>
 
 		<div class="flex-1 flex flex-col">
-			<div id="message-container" class="flex-1 max-w-xl h-full"></div>
+			<div id="message-container" class="flex-1 max-w-full h-full overflow-y-auto"></div>
 			<div id="input-container" class="border-t border-gray-600 p-4 flex">
 				<textarea
 					placeholder="Type your message"
 					rows="1"
-					class="flex-1 bg-gray-700 max-h-[200px] resize-none rounded p-2 text-white border-none focus:ring-2 focus:ring-blue-500 outline-none"
+					class="flex-1 bg-gray-700 max-h-[200px] resize-none rounded p-2 text-white border-none focus:ring-2 text-lg focus:ring-blue-500 outline-none"
 					style="height: 50px"
 				></textarea>
 				<button class="bg-blue-500 hover:bg-blue-600 text-white rounded px-4 ml-4">
@@ -43,54 +43,67 @@ export const html = `
 		</div>
 
 		<script>
-			document.addEventListener('DOMContentLoaded', function () {
-				const messageContainer = document.getElementById('message-container');
-				const inputContainer = document.getElementById('input-container');
-				const textBox = inputContainer.querySelector('textarea');
+      document.addEventListener('DOMContentLoaded', function () {
+        const messageContainer = document.getElementById('message-container');
+        const inputContainer = document.getElementById('input-container');
+        const textBox = inputContainer.querySelector('textarea');
 
-				function appendMessage(text) {
-					const messageDiv = document.createElement('div');
-					messageDiv.className = 'bg-gray-700 text-white p-4 rounded-lg max-w-lg mx-auto my-2';
-					messageDiv.textContent = text;
-					messageContainer.appendChild(messageDiv);
-					messageContainer.scrollTop = messageContainer.scrollHeight;
-				}
+        function appendUserMessage(text) {
+          const messageDiv = document.createElement('div');
+          messageDiv.className = 'bg-gray-800 text-white text-xl p-16 mx-auto';
+          messageDiv.textContent = text;
+          messageContainer.appendChild(messageDiv);
+          messageContainer.scrollTop = messageContainer.scrollHeight;
+        }
 
-				function handleMessageSend() {
-					const message = textBox.value.trim();
-					if (message) {
-						appendMessage(message);
-						sendMessage(message);
-						textBox.value = '';
-					}
-				}
+        function appendSystemMessage(text) {
+          const messageDiv = document.createElement('div');
+          messageDiv.className = 'bg-gray-700 text-white text-xl p-16 mx-auto';
+          messageDiv.textContent = text;
+          messageContainer.appendChild(messageDiv);
+          messageContainer.scrollTop = messageContainer.scrollHeight;
+        }
 
-				inputContainer.querySelector('button').addEventListener('click', handleMessageSend);
+        function handleMessageSend() {
+          const message = textBox.value.trim();
+          if (message) {
+            appendUserMessage(message);
+            sendMessage(message);
+            textBox.value = '';
+          }
+        }
 
-				textBox.addEventListener('keypress', function (event) {
-					if (event.key === 'Enter') {
-						handleMessageSend();
-					}
-				});
+        inputContainer.querySelector('button').addEventListener('click', handleMessageSend);
 
-				function sendMessage(message) {
-					fetch('/ai', {
-						method: 'POST',
-						headers: { 'Content-Type': 'application/json' },
-						body: JSON.stringify({ message }),
-					})
-						.then((response) => {
-							if (!response.ok) {
-								return Promise.reject(new Error('Failed to send message'));
-							}
-							return response;
-						})
-						.catch((error) => {
-							appendMessage(error.message);
+        textBox.addEventListener('keypress', function (e) {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            handleMessageSend();
+          }
+        });
+
+        async function sendMessage(message) {
+					try {
+						const response = await fetch('/ai', {
+							method: 'POST',
+							headers: { 'Content-Type': 'application/json' },
+							body: JSON.stringify({ message }),
 						});
+
+						if (!response.ok) {
+							throw new Error('Failed to send message');
+						}
+
+						const data = await response.json();
+						appendSystemMessage(data.response); 
+
+						textBox.value = '';
+					} catch (error) {
+						appendSystemMessage(error.message);
+					}
 				}
-			});
-		</script>
+      });
+    </script>
 	</body>
 </html>
 `
