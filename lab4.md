@@ -163,6 +163,21 @@ The provided JavaScript code handles user input, message sending, and displaying
 - Event listeners for message sending
 - The `sendMessage` function that handles the fetch request to the `/ai` endpoint and processes the response
 
+And now in your index.js file add the following code:
+
+```js
+const body = await request.json();
+			const userMessage = body.message;
+			const messages = [
+				{ role: 'system', content: 'You are an friendly assistant.' },
+				{ role: 'user', content: userMessage },
+			]
+
+			const message = await ai.run('@cf/meta/llama-2-7b-chat-int8', {
+				messages,
+			});
+```
+
 After integrating the template, launch the application with the following command:
 
 ```sh
