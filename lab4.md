@@ -167,15 +167,15 @@ And now in your index.js file add the following code:
 
 ```js
 const body = await request.json();
-			const userMessage = body.message;
-			const messages = [
-				{ role: 'system', content: 'You are an friendly assistant.' },
-				{ role: 'user', content: userMessage },
-			]
+const userMessage = body.message;
+const messages = [
+  { role: 'system', content: 'You are an friendly assistant.' },
+  { role: 'user', content: userMessage },
+]
 
-			const message = await ai.run('@cf/meta/llama-2-7b-chat-int8', {
-				messages,
-			});
+const message = await ai.run('@cf/meta/llama-2-7b-chat-int8', {
+  messages,
+});
 ```
 
 After integrating the template, launch the application with the following command:

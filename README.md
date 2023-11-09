@@ -36,10 +36,10 @@ Implement the core functionality by running an inference task with your chatbot.
 <!-- ## [Lab 4: Streaming Response with Workers AI ](./lab4.md)
 Enhance your chatbot with streaming responses to provide a dynamic conversational experience. -->
 
-## [Lab 4: Customizing the Chatbot Interface](./lab5.md)
+## [Lab 4: Customizing the Chatbot Interface](./lab4.md)
 Let's add a bit of love to our application, by creating a UI for the chat interface.
 
-## [Lab 5: Deploy your Worker](./lab6.md)
+## [Lab 5: Deploy your Worker](./la5.md)
 Prepare your chatbot to be accessible globally by deploying it to the internet.
 
 ## Next Steps
