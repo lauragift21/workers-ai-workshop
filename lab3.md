@@ -31,10 +31,17 @@ export default {
 };
 ```
 
-With this code in place, you can test your Worker locally by running the following command:
+With this code in place, let's update the scripts in the package.json file with the following commands:
 
 ```sh
-npm run dev --remote
+"dev": "wrangler dev --remote",
+"start": "wrangler dev --remote",
+```
+
+Now we can run the application using:
+
+```sh
+npm run dev
 ```
 
 This will allow you to interact with your chatbot and receive answers to questions in real-time.
